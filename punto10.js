@@ -51,23 +51,23 @@ let posicion =-1
 ///funcion principal
 function alimentosDieta(alimentos,callback){
     setTimeout(function(){
-        let seleccionDieta = alimentos.filter(function(alimento){
+        let vegetalesDieta = alimentos.filter(function(alimento){
             return alimento.tipo=='vegetal' && alimento.energia>200//
         })
-        callback(seleccionDieta)
+        callback(vegetalesDieta)
     },5000)
 
 }
 //llamando funcion
 let sumEnergia=0;
-alimentosDieta(alimentos,function(seleccionDieta){
+alimentosDieta(alimentos,function(vegetalesDieta){
     console.log(alimentos[90])
     console.log(alimentos[101])
     console.log(alimentos[201])
-    console.log(seleccionDieta)
+    console.log(vegetalesDieta)
 
-    for(let i=0;i<seleccionDieta.length;i++){
-        sumEnergia=sumEnergia+seleccionDieta[i].energia
+    for(let i=0;i<vegetalesDieta.length;i++){
+        sumEnergia=sumEnergia+vegetalesDieta[i].energia
     }
     console.log(`la sumatoria final es ${sumEnergia}`)
     
