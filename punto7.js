@@ -1,25 +1,84 @@
-numeros=[-2,4,6,10,8,12,45,10,17]
-let menor=0
-let mayo=0
-for (let i = 0; i < 9; i++){
-    numeros[i]>menor
+// numeros=[8,4,-1,6,10,3,45,-8,17]
+// let menor=[]
+// let mayor=[]
+// for (let i = 0; i < numeros.length; i++){
+//     if(numeros[i]>0){
+//         mayor.push(numeros[i])
+//     }else if(numeros[i]<0)
+//         menor.push(numeros[i])
+//     }
+// let cercano=mayor[0]
+// function encontrarMenor(mayor){
+    
+//     for (let i = 1; i < mayor.length; i++) {
+//         if(parseInt(mayor[i]) < parseInt(cercano)){
+//             cercano=mayor[i]
+//         } 
+//     }
+  
+// }
+// let cercanoMenor=menor[0]
+// function encontrarMenorNegativo(menor){
+    
+//     for (let i = 1; i < menor.length; i++) {
+//         if(parseInt(menor[i]) > parseInt(cercanoMenor) ){
+//             cercanoMenor=menor[i]
+//         } 
+//     }
+    
+// }
+//  encontrarMenor(mayor)
+//  encontrarMenorNegativo(menor)
 
+// let vAbsoluto= Math.abs(cercanoMenor)
+// if(vAbsoluto<cercano){
+//     console.log("el numero mas cerca a 0 es  "+cercanoMenor+" el valor absoluto es : "+vAbsoluto)
+// }else if(vAbsoluto>cercano){
+//     console.log("el numero mas cerca es: "+cercano)
+// }else{
+//     console.log("los numeros mas cercanos a 0 son "+cercanoMenor+" y  "+cercano)
+// }
+
+
+////// flecha
+
+numeros=[8,4,-1,6,10,3,45,-8,17]
+let menor=[]
+let mayor=[]
+for (let i = 0; i < numeros.length; i++){
+    if(numeros[i]>0){
+        mayor.push(numeros[i])
+    }else if(numeros[i]<0)
+        menor.push(numeros[i])
     }
-
-
-function encontrarMenor(numeros){
-    //let menor=numeros[0]
-    for (let i = 0; i < numeros.length; i++) {
-        if(numeros[i]<menor){
-            menor=numeros[i]
-        }
-        
+let cercano=mayor[0]
+ let encontrarMenor=(mayor)=>{
+    
+    for (let i = 1; i < mayor.length; i++) {
+        if(parseInt(mayor[i]) < parseInt(cercano)){
+            cercano=mayor[i]
+        } 
     }
-    console.log("el numero menor es: "+menor)
-    if(menor<0){
-      vAbsoluto= Math.abs(menor)
-      console.log("el valor absoluto de "+menor+" es: "+vAbsoluto)
+  
+}
+let cercanoMenor=menor[0]
+let encontrarMenorNegativo= (menor)=>{
+    
+    for (let i = 1; i < menor.length; i++) {
+        if(parseInt(menor[i]) > parseInt(cercanoMenor) ){
+            cercanoMenor=menor[i]
+        } 
     }
     
 }
-encontrarMenor(numeros)
+ encontrarMenor(mayor)
+ encontrarMenorNegativo(menor)
+
+let vAbsoluto= Math.abs(cercanoMenor)
+if(vAbsoluto<cercano){
+    console.log("el numero mas cerca a 0 es  "+cercanoMenor+" el valor absoluto es : "+vAbsoluto)
+}else if(vAbsoluto>cercano){
+    console.log("el numero mas cerca es: "+cercano)
+}else{
+    console.log("los numeros mas cercanos a 0 son "+cercanoMenor+" y  "+cercano)
+}
